@@ -7,9 +7,20 @@
 // export default nextConfig;
 
 
+// /** @type {import('next').NextConfig} */
+// const nextConfig = {
+//   output: 'export', // optional, Next.js 14+
+// };
+
+// module.exports = nextConfig;
+
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // optional, Next.js 14+
-};
+  experimental: {
+    turbo: false, // disable Turbopack for production
+  },
+  reactStrictMode: true,
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig
